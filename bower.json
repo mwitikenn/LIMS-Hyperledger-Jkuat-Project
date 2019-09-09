@@ -1,0 +1,39 @@
+{
+  "name": "landsys",
+  "description": "Client Side Application for the Landsys Network",
+  "main": "app.js",
+  "authors": [
+    "Alex Mong'are"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^5.9.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  },
+    "overrides":{
+        "bootstrap":{
+            "main":[
+                "dist/js/bootstrap.js",
+                "dist/css/bootstrap.css",
+                "less/bootstrap.less"
+            ]
+        },
+        "font-awesome":{
+            "main":[
+                "less/font-awesome.less",
+                "css/font-awesome.min.css",
+                "scss/font-awesome.scss"
+            ]
+        }
+    }
+}

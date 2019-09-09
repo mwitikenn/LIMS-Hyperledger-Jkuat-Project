@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Participant Form</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+     <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">LANDSYS</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
+        </div>
+    </nav>
+
+    <header id="main-header" class="py-2 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><i class="fa fa-user"></i> LANDSYS</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ACTIONS -->
+    <section id="action" class="py-4 mb-4 bg-light">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>CREATE A NEW PARTICIPANT</h4>
+                        </div>
+                        <div class="card-body">
+                            <form name="createParticipantForm"action="/admin/createparticipant" method="post">
+                                <div class="form-group">
+                                    <label for="offer"> ID NUMBER</label>
+                                    <input pattern="^[0-9]{8}" title="8 digits" name="idNumber"id="idNumber" type="text" class="form-control" required>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="offer">PASSWORD</label>
+                                    <input name="password"id="password" type="password" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deptName">Department Name</label>
+                                    <select class="form-control" name="deptName" required>
+                                        <option value="county_office">County Land Office</option>
+                                        <option value="commissioner_office">Commissioner Of Lands</option>
+                                        <option value="lands_office">Land Office</option>
+                                        <option value="govt_evaluator">Government Evaluator</option>
+                                        <option value="kra">Kenya Revenue Authority</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">FIRST NAME</label>
+                                    <input name="fName"id="fName" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">LAST NAME</label>
+                                    <input name="lName"id="lName" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">SURNAME</label>
+                                    <input name="surname"id="surname" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber" >EMAIL</label>
+                                    <input name="email"id="email" type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">PHONE NUMBER</label>
+                                    <input name="phonenumber"id="phonenumber" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">COUNTY</label>
+                                    <input name="county"id="county" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">SUB COUNTY</label>
+                                    <input name="subcounty"id="subcounty" type="text" class="form-control" required>
+                                </div>
+                                div class="form-group">
+                                    <label for="country">COUNTRY</label>
+                                    <select class="form-control" name="country" required>
+                                        <option value="kenya">KENYA</option>
+                                    </select>
+                                </div><
+                                <input type="submit" class="btn btn-primary btn-block" value="Create Participant">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>CREATE LAND ASSET</h4>
+                        </div>
+                        <div class="card-body">
+                            <form name="createLandForm"action="/home/createLand" method="post">
+                                <div class="form-group">
+                                    <label for="offer">OWNER ID</label>
+                                    <input name="ownerId"id="ownerId" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deednumber">DEED NUMBER</label>
+                                    <input name="deedNo"id="deedNo" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="size">SIZE</label>
+                                    <input name="size"id="size" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">LOCATION</label>
+                                    <input name="location"id="location" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lantype">LAND TYPE</label>
+                                    <select class="form-control" name="landtype" required>
+                                        <option value="PUBLIC">PUBLIC</option>
+                                        <option value="PRIVATE">PRIVATE</option>
+                                        <option value="COMMUNITY">COMMUNITY</option>
+                                    </select>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="offer">LAND VALUE</label>
+                                    <input name="landValue"id="landValue" type="text" class="form-control" required> 
+                                </div>
+                                <div class="form-group">
+                                    <label for="taxCompliant">TAX COMPLIANCE</label>
+                                    <select class="form-control" name="taxCompliant" id="taxCompliant" required>
+                                        <option value="yes">YES</option>
+                                        <option value="no">NO</option>
+                                    </select>
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block" value="Create Land Asset">
+                            </form>
+                        </div>
+                    </div>
+                     
+                       <div class="card">
+                        <div class="card-header">
+                            <h4>UPDATE LAND ASSET</h4>
+                        </div>
+                        <div class="card-body">
+                            <form name="updateLandForm"action="/home/updateLand" method="post">
+                                
+                                <div class="form-group">
+                                    <label for="sdeednumber">DEED NUMBER</label>
+                                    <input name="deedNo"id="deedNo" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="size">SIZE</label>
+                                    <input name="size"id="size" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">LOCATION</label>
+                                    <input name="location"id="location" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="landtype">LAND TYPE</label>
+                                    <select class="form-control" name="landtype" required>
+                                        <option value="PUBLIC">PUBLIC</option>
+                                        <option value="PRIVATE">PRIVATE</option>
+                                        <option value="COMMUNITY">COMMUNITY</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="landValue">LAND VALUE</label>
+                                    <input name="landValue" id="landValue" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taxCompliant">TAX COMPLIANCE</label>
+                                    <select class="form-control" name="taxCompliant" required>
+                                        <option value="yes">YES</option>
+                                        <option value="no">NO</option>
+                                    </select>
+                                </div>
+                                <input type="submit" class="btn btn-primary btn-block" value="Update Land Asset">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col">
+                    <p class="lead text-center">Copyright &copy; 2019 landsys</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+
+    </script>
+</body>
+
+</html>
